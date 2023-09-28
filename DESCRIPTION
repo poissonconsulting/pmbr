@@ -1,6 +1,6 @@
 Package: pmbr
 Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Date: 2023-09-28
 Authors@R: 
     person("Kirill", "Müller", , "kirill@cynkra.com", role = c("aut", "cre"),
