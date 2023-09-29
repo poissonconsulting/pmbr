@@ -38,7 +38,7 @@ pmb_code_unnamed <- function(quo) {
 }
 
 pmb_code_quo <- function(quo) {
-  expr <- quo_get_expr()
+  expr <- quo_get_expr(quo)
   if (is_string(expr)) {
     mb_code(expr)
   } else if (expr[[1]] == "{") {
