@@ -2,27 +2,18 @@
 % Please edit documentation in R/model.R
 \name{pmb_model}
 \alias{pmb_model}
-\title{MB Model}
+\title{PMB Model}
 \usage{
-pmb_model(
-  code,
-  ...,
-  new_expr = NULL,
-  new_expr_vec = getOption("mb.new_expr_vec", FALSE)
-)
+pmb_model(code, ...)
 }
 \arguments{
-\item{code}{Passed on to \code{\link[=pmb_code]{pmb_code()}}}
+\item{code}{Passed on to \code{\link[=pmb_code]{pmb_code()}}, using \code{{{ }}}.}
 
-\item{...}{These dots are for future extensions and must be empty.}
-
-\item{new_expr}{A string of R code specifying the predictive relationships.}
-
-\item{new_expr_vec}{A flag specifying whether to vectorize the new_expr code.}
+\item{...}{Passed on to \code{\link[=model]{model()}}.}
 }
 \value{
-An object inheriting from class \code{mb_model}.
+An object inheriting from class \code{"pmb_model"}.
 }
 \description{
-Creates object inherting from class mb_model.
+Creates object inherting from class \code{"pmb_model"}.
 }
