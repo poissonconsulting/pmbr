@@ -53,4 +53,32 @@
       #include <TMB.hpp>
       attr(,"class")
       [1] "pmb_code"
+    Code
+      pmb_code(c(pmbr = { }, jmbr = mb_code("model {"), tmbr = mb_code(
+        "#include <TMB.hpp>")))
+    Output
+      $pmbr
+      {
+      }
+      
+      $jmbr
+      model {
+      $tmbr
+      #include <TMB.hpp>
+      attr(,"class")
+      [1] "pmb_code"
+    Code
+      pmb_code(list(pmbr = { }, jmbr = mb_code("model {"), tmbr = mb_code(
+        "#include <TMB.hpp>")))
+    Output
+      $pmbr
+      {
+      }
+      
+      $jmbr
+      model {
+      $tmbr
+      #include <TMB.hpp>
+      attr(,"class")
+      [1] "pmb_code"
 

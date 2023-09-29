@@ -6,6 +6,8 @@
 #' @param ...
 #'   Named strings, unevaluated expressions, or [mb_code()] objects,
 #'   or a single unnamed string, unevaluated expressions, or `"pmb_code"` object.
+#'   Expressions of the form `c(...)` and `list(...)` with named dots
+#'   are also recognized, for use in [pmb_model()].
 #'
 #' @return An object inheriting from class `"pmb_code"`: a named list of
 #'   `"mb_code"` objects or quoted expressions.
@@ -30,6 +32,9 @@ pmb_code_unnamed <- function(quo) {
     list2(!!name := code)
   } else if (expr[[1]] == "{") {
     list(pmbr = expr)
+  } else if (expr[[1]] == "c" || expr[[1]] == "list") {
+    quos <- map(as.list(expr[-1]), new_quosure, quo_get_env(quo))
+    map(quos, pmb_code_quo)
   } else {
     out <- eval_tidy(quo)
     stopifnot(is.pmb_code(out))
