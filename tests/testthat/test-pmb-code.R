@@ -7,11 +7,16 @@ test_that("pmb_code() works", {
     pmb_code(pmb_code({}))
     pmb_code(
       pmbr = {},
+      jmbr = "model {",
+      tmbr = "#include <TMB.hpp>",
+    )
+    pmb_code(
+      pmbr = mb_code({}),
       jmbr = mb_code("model {"),
       tmbr = mb_code("#include <TMB.hpp>"),
     )
     pmb_code(c(
-      pmbr = {},
+      pmbr = mb_code({}),
       jmbr = mb_code("model {"),
       tmbr = mb_code("#include <TMB.hpp>")
     ))

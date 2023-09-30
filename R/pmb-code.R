@@ -47,7 +47,7 @@ pmb_code_quo <- function(quo) {
   if (is_string(expr)) {
     mb_code(expr)
   } else if (expr[[1]] == "{") {
-    expr
+    mb_code(expr)
   } else {
     eval_tidy(quo)
   }

@@ -40,13 +40,11 @@
       attr(,"class")
       [1] "pmb_code"
     Code
-      pmb_code(pmbr = { }, jmbr = mb_code("model {"), tmbr = mb_code(
-        "#include <TMB.hpp>"), )
+      pmb_code(pmbr = { }, jmbr = "model {", tmbr = "#include <TMB.hpp>", )
     Output
       $pmbr
-      {
-      }
-      
+      structure(list(template = {
+      }), class = c("pmb_code", "mb_code"))
       $jmbr
       model {
       $tmbr
@@ -54,13 +52,25 @@
       attr(,"class")
       [1] "pmb_code"
     Code
-      pmb_code(c(pmbr = { }, jmbr = mb_code("model {"), tmbr = mb_code(
+      pmb_code(pmbr = mb_code({ }), jmbr = mb_code("model {"), tmbr = mb_code(
+        "#include <TMB.hpp>"), )
+    Output
+      $pmbr
+      structure(list(template = {
+      }), class = c("pmb_code", "mb_code"))
+      $jmbr
+      model {
+      $tmbr
+      #include <TMB.hpp>
+      attr(,"class")
+      [1] "pmb_code"
+    Code
+      pmb_code(c(pmbr = mb_code({ }), jmbr = mb_code("model {"), tmbr = mb_code(
         "#include <TMB.hpp>")))
     Output
       $pmbr
-      {
-      }
-      
+      structure(list(template = {
+      }), class = c("pmb_code", "mb_code"))
       $jmbr
       model {
       $tmbr
@@ -72,9 +82,8 @@
         "#include <TMB.hpp>")))
     Output
       $pmbr
-      {
-      }
-      
+      structure(list(template = {
+      }), class = c("pmb_code", "mb_code"))
       $jmbr
       model {
       $tmbr
