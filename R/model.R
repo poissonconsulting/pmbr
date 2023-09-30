@@ -12,7 +12,7 @@ pmb_model <- function(
     ...) {
 
   code <- pmb_code({{ code }})
-  check_mb_code(code)
+  check_pmb_code(code)
 
   model <- model(code = code[[1]], ...)
   new_pmb_model(model, code)

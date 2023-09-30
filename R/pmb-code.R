@@ -62,3 +62,10 @@ new_pmb_code <- function(x) {
 is.pmb_code <- function(x) {
   inherits(x, "pmb_code")
 }
+
+check_pmb_code <- function(object, object_name = substitute(object)) {
+  if (!is.character(object_name)) object_name <- deparse(object_name)
+
+  if (!is.pmb_code(object)) err(object_name, " must inherit from class mb_code", tidy = FALSE)
+  object
+}
