@@ -7,7 +7,7 @@
 #'   Named strings, unevaluated expressions, or [mb_code()] objects,
 #'   or a single unnamed string, unevaluated expressions, or `"pmb_code"` object.
 #'   Expressions of the form `c(...)` and `list(...)` with named dots
-#'   are also recognized, for use in [pmb_model()].
+#'   are also recognized, for use in [pmb_multi_model()].
 #'
 #' @return An object inheriting from class `"pmb_code"`: a named list of
 #'   `"mb_code"` objects or quoted expressions.

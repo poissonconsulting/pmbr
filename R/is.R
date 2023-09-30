@@ -5,7 +5,7 @@
 #' @param x The object to test.
 #' @return A flag indicating whether the test was positive.
 #' @export
-is.pmb_model <- function(x) {
+is.pmb_multi_model <- function(x) {
   inherits(x, "mb_model")
 }
 
@@ -16,7 +16,7 @@ is.pmb_model <- function(x) {
 #' @param x The object to test.
 #' @return A flag indicating whether the test was positive.
 #' @export
-is.pmb_models <- function(x) {
+is.pmb_multi_models <- function(x) {
   inherits(x, "mb_models")
 }
 

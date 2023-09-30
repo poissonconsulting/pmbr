@@ -1,13 +1,13 @@
 #' PMB Model
 #'
-#' Creates object inherting from class `"pmb_model"`.
+#' Creates object inherting from class `"pmb_multi_model"`.
 #'
 #' @param code Passed on to [pmb_code()], using `{{ }}`.
 #' @param ... Passed on to [model()].
 #'
-#' @return An object inheriting from class `"pmb_model"`.
+#' @return An object inheriting from class `"pmb_multi_model"`.
 #' @export
-pmb_model <- function(
+pmb_multi_model <- function(
     code,
     ...) {
 
@@ -15,7 +15,7 @@ pmb_model <- function(
   check_pmb_code(code)
 
   model <- model(code = code[[1]], ...)
-  new_pmb_model(model, code)
+  new_pmb_multi_model(model, code)
 }
 
 #' Low-level PMB model constructor
@@ -24,6 +24,6 @@ pmb_model <- function(
 #' @param code An object of class `"pmb_code"`.
 #'
 #' @export
-new_pmb_model <- function(model, code) {
-  structure(list(model = model, code = code), class = c("pmb_model"))
+new_pmb_multi_model <- function(model, code) {
+  structure(list(model = model, code = code), class = c("pmb_multi_model"))
 }

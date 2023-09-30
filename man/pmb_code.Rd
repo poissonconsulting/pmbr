@@ -10,7 +10,7 @@ pmb_code(...)
 \item{...}{Named strings, unevaluated expressions, or \code{\link[=mb_code]{mb_code()}} objects,
 or a single unnamed string, unevaluated expressions, or \code{"pmb_code"} object.
 Expressions of the form \code{c(...)} and \code{list(...)} with named dots
-are also recognized, for use in \code{\link[=pmb_model]{pmb_model()}}.}
+are also recognized, for use in \code{\link[=pmb_multi_model]{pmb_multi_model()}}.}
 }
 \value{
 An object inheriting from class \code{"pmb_code"}: a named list of
